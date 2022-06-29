@@ -1,0 +1,26 @@
+{%- extends "base.html" -%}
+
+{%- block content -%}
+    <h1>Our Staff</h1>
+
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Picture</th>
+                <th>Bio</th>
+            </tr>
+        </thead>
+        <tbody>   
+            {%- for record in staff_list_parsed %}
+                </tr>
+                    <td>{{record.staff_name}}</td>
+                    <td>{{record.position}}</td>
+                    <td>{{record.profile_img}}</td>
+                    <td>{{record.bio}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{%- endblock -%}

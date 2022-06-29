@@ -1,0 +1,21 @@
+{%- extends "base.html" -%}
+
+{%- block content -%}
+    <h1 class = "center-align blue-text">Our Staff</h1>
+    <br>
+
+    
+    {%- for record in staff_list_parsed %}
+    
+    <h2>{{record.staff_name}}</h2>
+    <h3>{{record.position}}</h3>
+    <p>
+        {% for dict_item in record.profile_img%}
+        <img src={{dict_item.url}} alt="Girl in a jacket" width="200" height="300">
+        
+        {% endfor %}</p>
+    <p>{{record.bio}}</p>
+                
+    {% endfor %}
+
+{%- endblock -%}

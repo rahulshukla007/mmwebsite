@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+
+/* Move static files you need to project_root/static/. Let's assume that you moved stylesheets/style.css into project_root/static/stylesheets/style.css.
+
+Change
+
+<link ... href="/stylesheets/style.css" />
+to
+
+<link ... href="{{ url_for('static', filename='stylesheets/style.css') }}" />
